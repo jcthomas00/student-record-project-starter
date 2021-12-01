@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --dark-color: #000;
+    --light-color: #fff;
+    --fun-color: #FF92A5;
+    --secondary-light-color: #eee;
+    --good: #15B5B0;
+    --bad: #F51720;
+    --body-font: 'Outfit', sans-serif;
+    --header-font: 'Nanum Pen Script', cursive;
+}
+
+body{
+    font-family: var(--body-font);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    background: url("https://cdn.pixabay.com/photo/2018/02/23/19/56/background-3176447_1280.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+.container{
+    display: block;
+    width: 100%;
+    background-color: var(--secondary-light-color);
+    position: relative;
+}
+/* Header */
+h1{
+    font-family: var(--header-font);
+    color: var(--fun-color);
+    background-color: var(--dark-color);
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    display: block;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--dark-color);
+    margin-bottom: 20px;
+}
+.nav-item{
+    background: none;
+    color: var(--light-color);
+    border: none;
+    margin: 10px;
+    font-family: var(--body-font);
+    font-weight: bold;
+    font-size: 15px;
+}
+.nav-item.selected{
+    border-bottom: 2px solid var(--fun-color);
+}
+/* Main */
+.table-container{
+    max-width: 100%;
+    overflow-x: scroll;
+}
+table.grades {
+    max-width: 90%;
+    margin: auto;
+}
+.grades{
+    width: 100%;
+}
+tr.gradeRow input {
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+tr.gradeRow input:disabled {
+    color: var(--dark-color);
+}
+td {
+    text-align: center;
+}
+table.grades th {
+    border-bottom: 1px solid var(--fun-color);
+    padding-bottom: 10px;
+}
+table.grades tbody tr:first-child td {
+    padding-top: 10px;
+}
+.sort {
+    font-weight: bold;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.far{
+    font-weight: bold;
+    font-size: 20px;
+}
+.fa-sad-cry{
+    color: var(--bad);
+}
+.fa-laugh-beam{
+    color: var(--good);
+}
+input#deleteGrade {
+    cursor: pointer;
+    font-weight: 900;
+    color: var(--bad);
+}
+#newGrade {
+    max-width: 99%;
+    margin: auto;
+}
+#newGrade fieldset {
+    border-radius: 10px;
+}
+form#newGrade label {
+    display: block;
+    padding: 5px;
+    clear: both;
+    text-align: center;
+}
+form#newGrade input {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid var(--dark-color);
+    border-radius: 5px;
+    float: none;
+    display: block;
+    margin: 5px auto;
+}
+
+form#newGrade input[type="submit"] {
+    padding: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: var(--fun-color);
+    margin-top: 20px;
+    font-family: 'Outfit';
+    letter-spacing: 2px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: var(--dark-color);
+    color: var(--fun-color);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    left: 0;
+}
+@media screen and (min-width: 992px) {
+    .container{
+        max-width: 900px;
+        border-radius: 25px;
+        margin: 10px auto;
+    }
+    h1{
+        border-radius: 25px 25px 0 0;
+    }
+    #newGrade {
+        max-width: 95%;
+    }
+    form#newGrade input {
+        float: right;
+        width: 50%;
+        margin-bottom: 5px;
+    }
+    form#newGrade label {
+        text-align: left;
+    }
+    form#newGrade input[type="submit"] {
+        max-width: 200px;
+        margin: 10px 5px;
+        font-weight: 900;
+        clear: both;
+        float: right;
+    }
+    footer {
+        border-radius: 0 0 25px 25px;
+        padding: 5px 0;
+    }
+}
