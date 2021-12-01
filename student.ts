@@ -1,13 +1,8 @@
 export class Student {
-    firstName: string;
-    lastName: string;
-    course: string;
+   
     grade: string;
 
-    constructor(firstName: string, lastName: string, course: string, grade:  (number | string)){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.course = course;
+    constructor(public firstName: string, public lastName: string, public course: string, grade:  (number | string)){
         this.grade = this.standardizeGrade(grade.toString());
     }
 
